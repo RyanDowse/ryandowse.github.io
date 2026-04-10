@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ryan Dowse | Business Broker — Cannabis M&A, Commercial Real Estate</title>
+<meta name="description" content="California-licensed broker closing cannabis M&A, commercial acquisitions, and complex transactions other brokers won't touch. $12.5M+ closed. DRE 02074994."/>
+<meta name="keywords" content="cannabis broker, cannabis M&A California, business broker, commercial real estate broker, cannabis acquisition, dispensary sale, DRE 02074994, Ryan Dowse"/>
+<meta property="og:title" content="Ryan Dowse — Business Broker"/>
+<meta property="og:description" content="$12.5M+ closed in cannabis M&A, commercial real estate, and complex acquisitions. Based in California, working nationwide."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://ryandowse.com"/>
+<link rel="canonical" href="https://ryandowse.com"/>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Ryan Dowse","jobTitle":"Business Broker & Commercial Real Estate Broker","description":"California-licensed broker specializing in cannabis M&A, commercial real estate, and complex business acquisitions.","url":"https://ryandowse.com","telephone":"760-987-9202","email":"Dowse.Deals@Gmail.com","address":{"@type":"PostalAddress","addressRegion":"CA","addressCountry":"US"},"hasCredential":{"@type":"EducationalOccupationalCredential","credentialCategory":"license","name":"California Real Estate Broker License","identifier":"DRE 02074994"}}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Serif:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"/>
+
+<style>
+:root {
+  --ink: #0e0e0d;
+  --paper: #f2ede4;
+  --paper2: #e8e2d8;
+  --rule: #c8c0b0;
+  --rule-light: #ddd8ce;
+  --accent: #c1370a;
+  --accent2: #8a2406;
+  --muted: #7a7268;
+  --dim: #b0a898;
+  --white: #faf8f4;
+  --mono: 'IBM Plex Mono', monospace;
+  --serif: 'IBM Plex Serif', Georgia, serif;
+  --display: 'Bebas Neue', Impact, sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── CURSOR ── */
+* { cursor: none !important; }
+#cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease, width 0.2s ease, height 0.2s ease;
+  mix-blend-mode: multiply;
+}
+#cursor.expanded { width: 40px; height: 40px; }
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 0 48px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid transparent;
+  transition: all 0.4s ease;
+  mix-blend-mode: normal;
+}
+
+nav.solid {
+  background: var(--ink);
+  border-bottom-color: #1e1e1c;
+}
+
+.nav-mark {
+  font-family: var(--display);
+  font-size: 22px;
+  letter-spacing: 0.06em;
+  color: var(--paper);
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+nav.solid .nav-mark { opacity: 1; }
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--dim);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+nav.solid .nav-links a { color: #666; }
+nav.solid .nav-links a:hover { color: var(--paper); }
+.nav-links a:hover { color: var(--ink); }
+
+/* ── HERO ── */
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+/* Aerial California SVG landscape */
+.hero-landscape {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero-landscape svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(14,14,13,0.15) 0%,
+    rgba(14,14,13,0.05) 30%,
+    rgba(14,14,13,0.5) 70%,
+    rgba(14,14,13,0.92) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 48px 64px;
+}
+
+.hero-tag {
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+  opacity: 0;
+  animation: up 0.7s ease 0.3s forwards;
+}
+
+.hero-headline {
+  font-family: var(--display);
+  font-size: clamp(64px, 10vw, 148px);
+  line-height: 0.92;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-bottom: 32px;
+  opacity: 0;
+  animation: up 0.7s ease 0.5s forwards;
+}
+
+.hero-headline span {
+  display: block;
+  color: var(--accent);
+}
+
+.hero-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  opacity: 0;
+  animation: up 0.7s ease 0.7s forwards;
+}
+
+.hero-sub {
+  font-family: var(--serif);
+  font-size: 14px;
+  font-style: italic;
+  color: rgba(242,237,228,0.65);
+  max-width: 440px;
+  line-height: 1.7;
+}
+
+.hero-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.hero-phone {
+  font-family: var(--display);
+  font-size: 28px;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.hero-phone:hover { color: var(--accent); }
+
+.hero-email-link {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--dim);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.hero-email-link:hover { color: var(--paper); }
+
+/* ── TICKER ── */
+.ticker-wrap {
+  background: var(--accent);
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+  border-top: 1px solid var(--accent2);
+  border-bottom: 1px solid var(--accent2);
+}
+
+.ticker-inner {
+  display: inline-block;
+  animation: ticker 28s linear infinite;
+}
+
+.ticker-inner span {
+  font-family: var(--display);
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  color: var(--white);
+  padding: 0 40px;
+}
+
+.ticker-inner span::before {
+  content: '—';
+  margin-right: 40px;
+  opacity: 0.5;
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ── STATEMENT ── */
+.statement-section {
+  padding: 100px 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  border-bottom: 1px solid var(--rule);
+}
+
+.statement-left {
+  font-family: var(--display);
+  font-size: clamp(36px, 4.5vw, 64px);
+  line-height: 1.0;
+  letter-spacing: 0.03em;
+  color: var(--ink);
+}
+
+.statement-left em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.7em;
+  letter-spacing: 0;
+  color: var(--muted);
+  display: block;
+  margin-top: 8px;
+}
+
+.statement-right {
+  border-left: 2px solid var(--accent);
+  padding-left: 32px;
+}
+
+.statement-right p {
+  font-family: var(--serif);
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+
+.statement-right p strong {
+  color: var(--ink);
+  font-weight: 400;
+}
+
+/* ── TRANSACTIONS ── */
+.tx-section {
+  background: var(--ink);
+  padding: 80px 48px;
+  border-bottom: 1px solid #1e1e1c;
+}
+
+.tx-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 48px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #2a2a28;
+}
+
+.tx-label {
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.tx-total {
+  font-family: var(--display);
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  color: #444440;
+}
+
+.tx-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.tx-row {
+  display: grid;
+  grid-template-columns: 140px 1fr auto;
+  gap: 32px;
+  align-items: baseline;
+  padding: 20px 0;
+  border-bottom: 1px solid #1a1a18;
+  opacity: 0;
+  transform: translateX(-12px);
+  transition: opacity 0.5s ease, transform 0.5s ease, background 0.2s;
+}
+
+.tx-row.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.tx-row:last-child { border-bottom: none; }
+
+.tx-row:hover { background: rgba(255,255,255,0.02); }
+
+.tx-amount {
+  font-family: var(--display);
+  font-size: 28px;
+  letter-spacing: 0.04em;
+  color: var(--paper);
+  line-height: 1;
+}
+
+.tx-desc {
+  font-family: var(--serif);
+  font-size: 13px;
+  color: #888880;
+  line-height: 1.6;
+}
+
+.tx-desc strong {
+  color: #c8c0b0;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.tx-meta {
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #444440;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* ── SERVICES ── */
+.services-section {
+  padding: 100px 48px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.services-header {
+  margin-bottom: 64px;
+}
+
+.services-title {
+  font-family: var(--display);
+  font-size: clamp(40px, 5vw, 72px);
+  letter-spacing: 0.03em;
+  line-height: 0.95;
+  color: var(--ink);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  border: 1px solid var(--rule);
+}
+
+.svc {
+  padding: 36px 28px;
+  border-right: 1px solid var(--rule);
+  position: relative;
+  transition: background 0.3s;
+}
+
+.svc:last-child { border-right: none; }
+.svc:hover { background: var(--paper2); }
+
+.svc::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.svc:hover::after { transform: scaleX(1); }
+
+.svc-n {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--dim);
+  margin-bottom: 20px;
+  font-family: var(--mono);
+}
+
+.svc-name {
+  font-family: var(--display);
+  font-size: 22px;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+
+.svc-desc {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ── CREDENTIALS BAR ── */
+.cred-bar {
+  background: var(--paper2);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 0 48px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.cred-item {
+  padding: 28px 24px;
+  border-right: 1px solid var(--rule);
+}
+
+.cred-item:first-child { padding-left: 0; }
+.cred-item:last-child { border-right: none; }
+
+.cred-n {
+  font-family: var(--display);
+  font-size: 32px;
+  letter-spacing: 0.03em;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.cred-l {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ── ABOUT ── */
+.about-section {
+  padding: 100px 48px;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+
+.about-left .section-kicker {
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 24px;
+}
+
+.about-title {
+  font-family: var(--display);
+  font-size: clamp(38px, 4vw, 60px);
+  letter-spacing: 0.03em;
+  line-height: 0.95;
+  color: var(--ink);
+  margin-bottom: 40px;
+}
+
+.about-body p {
+  font-family: var(--serif);
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.9;
+  margin-bottom: 18px;
+}
+
+.about-body p strong {
+  color: var(--ink);
+  font-weight: 400;
+}
+
+.about-right {
+  padding-top: 8px;
+}
+
+.cred-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 32px;
+}
+
+.cred-table tr {
+  border-bottom: 1px solid var(--rule-light);
+}
+
+.cred-table tr:last-child { border-bottom: none; }
+
+.cred-table td {
+  padding: 14px 0;
+  font-size: 11px;
+  vertical-align: top;
+}
+
+.cred-table td:first-child {
+  color: var(--dim);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 9px;
+  width: 40%;
+  padding-top: 16px;
+}
+
+.cred-table td:last-child {
+  color: var(--ink);
+  text-align: right;
+}
+
+/* ── CONTACT ── */
+.contact-section {
+  background: var(--ink);
+  padding: 100px 48px;
+}
+
+.contact-top {
+  margin-bottom: 64px;
+}
+
+.contact-challenge {
+  font-family: var(--display);
+  font-size: clamp(44px, 7vw, 100px);
+  line-height: 0.92;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.contact-challenge span { color: var(--accent); }
+
+.contact-sub {
+  font-family: var(--serif);
+  font-size: 14px;
+  font-style: italic;
+  color: #666660;
+  max-width: 480px;
+  line-height: 1.8;
+}
+
+.contact-channels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #1e1e1c;
+  border: 1px solid #1e1e1c;
+}
+
+.channel {
+  background: var(--ink);
+  padding: 36px 32px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.channel::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.channel:hover { background: #131311; }
+.channel:hover::before { transform: scaleX(1); }
+
+.ch-type {
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #444440;
+  margin-bottom: 12px;
+}
+
+.ch-value {
+  font-family: var(--display);
+  font-size: 24px;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  transition: color 0.2s;
+}
+
+.channel:hover .ch-value { color: var(--accent); }
+
+.ch-action {
+  margin-top: 16px;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #333330;
+  transition: color 0.2s;
+}
+
+.channel:hover .ch-action { color: var(--accent); }
+
+/* ── FOOTER ── */
+footer {
+  background: #080807;
+  padding: 24px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #1a1a18;
+}
+
+.footer-left {
+  font-family: var(--display);
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  color: #333330;
+}
+
+.footer-right {
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #2a2a28;
+}
+
+/* ── REVEAL ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── ANIMATIONS ── */
+@keyframes up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  nav { padding: 0 24px; }
+  .nav-links { display: none; }
+  .hero-content { padding: 0 24px 48px; }
+  .hero-bottom { flex-direction: column; gap: 24px; align-items: flex-start; }
+  .statement-section { grid-template-columns: 1fr; gap: 40px; padding: 60px 24px; }
+  .tx-section { padding: 60px 24px; }
+  .tx-row { grid-template-columns: 100px 1fr; gap: 16px; }
+  .tx-meta { display: none; }
+  .services-section { padding: 60px 24px; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .cred-bar { grid-template-columns: repeat(2, 1fr); padding: 0 24px; }
+  .about-section { grid-template-columns: 1fr; gap: 48px; padding: 60px 24px; }
+  .contact-section { padding: 60px 24px; }
+  .contact-channels { grid-template-columns: 1fr; }
+  footer { padding: 20px 24px; flex-direction: column; gap: 8px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<div id="cursor"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-mark">DOWSE</a>
+  <ul class="nav-links">
+    <li><a href="#transactions">Transactions</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-landscape">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#b8c8d8"/>
+          <stop offset="40%" stop-color="#d4c8a8"/>
+          <stop offset="100%" stop-color="#c8a870"/>
+        </linearGradient>
+        <linearGradient id="horizon" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#c4a060"/>
+          <stop offset="100%" stop-color="#8a6030"/>
+        </linearGradient>
+        <linearGradient id="terrain1" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#9a7840"/>
+          <stop offset="100%" stop-color="#6a5028"/>
+        </linearGradient>
+        <linearGradient id="terrain2" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#7a6035"/>
+          <stop offset="100%" stop-color="#4a3818"/>
+        </linearGradient>
+        <linearGradient id="road" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#888070" stop-opacity="0"/>
+          <stop offset="20%" stop-color="#888070"/>
+          <stop offset="80%" stop-color="#888070"/>
+          <stop offset="100%" stop-color="#888070" stop-opacity="0"/>
+        </linearGradient>
+        <filter id="blur1"><feGaussianBlur stdDeviation="2"/></filter>
+        <filter id="blur2"><feGaussianBlur stdDeviation="1"/></filter>
+      </defs>
+
+      <!-- Sky -->
+      <rect width="1440" height="900" fill="url(#sky)"/>
+
+      <!-- Atmospheric haze at horizon -->
+      <ellipse cx="720" cy="420" rx="900" ry="120" fill="#d8c8a0" opacity="0.4" filter="url(#blur1)"/>
+
+      <!-- Distant mountains — far range -->
+      <path d="M0,420 L120,340 L200,380 L320,300 L420,360 L500,310 L600,350 L680,290 L760,330 L860,270 L960,320 L1060,280 L1160,330 L1260,295 L1360,340 L1440,310 L1440,440 L0,440 Z" fill="#b8a070" opacity="0.6" filter="url(#blur1)"/>
+
+      <!-- Mid mountains -->
+      <path d="M0,440 L80,390 L180,420 L280,370 L380,410 L480,365 L580,400 L680,360 L780,395 L880,355 L980,390 L1080,358 L1180,388 L1280,362 L1380,390 L1440,375 L1440,480 L0,480 Z" fill="#a09060" opacity="0.8"/>
+
+      <!-- Aerial terrain grid — parcel lines seen from above -->
+      <!-- Horizontal parcel lines converging at vanishing point -->
+      <g opacity="0.15" stroke="#604818" stroke-width="0.5" fill="none">
+        <line x1="0" y1="520" x2="1440" y2="500"/>
+        <line x1="0" y1="560" x2="1440" y2="530"/>
+        <line x1="0" y1="610" x2="1440" y2="565"/>
+        <line x1="0" y1="670" x2="1440" y2="605"/>
+        <line x1="0" y1="740" x2="1440" y2="650"/>
+        <line x1="0" y1="820" x2="1440" y2="700"/>
+        <line x1="0" y1="900" x2="1440" y2="760"/>
+      </g>
+
+      <!-- Vertical parcel lines -->
+      <g opacity="0.12" stroke="#604818" stroke-width="0.5" fill="none">
+        <line x1="180" y1="480" x2="120" y2="900"/>
+        <line x1="320" y1="480" x2="240" y2="900"/>
+        <line x1="460" y1="480" x2="380" y2="900"/>
+        <line x1="600" y1="480" x2="540" y2="900"/>
+        <line x1="720" y1="480" x2="680" y2="900"/>
+        <line x1="840" y1="480" x2="820" y2="900"/>
+        <line x1="960" y1="480" x2="960" y2="900"/>
+        <line x1="1080" y1="480" x2="1100" y2="900"/>
+        <line x1="1200" y1="480" x2="1240" y2="900"/>
+        <line x1="1320" y1="480" x2="1380" y2="900"/>
+      </g>
+
+      <!-- Main terrain fill -->
+      <path d="M0,480 L1440,460 L1440,900 L0,900 Z" fill="url(#terrain1)"/>
+
+      <!-- Darker foreground terrain -->
+      <path d="M0,620 C200,600 400,640 600,618 C800,596 1000,632 1200,614 C1320,604 1400,618 1440,612 L1440,900 L0,900 Z" fill="url(#terrain2)"/>
+
+      <!-- Freeway — straight line cutting through terrain -->
+      <path d="M-20,720 Q400,680 720,665 Q1040,650 1460,640" stroke="url(#road)" stroke-width="8" fill="none" opacity="0.7"/>
+      <!-- Freeway center line -->
+      <path d="M-20,720 Q400,680 720,665 Q1040,650 1460,640" stroke="#a09070" stroke-width="1" fill="none" opacity="0.4" stroke-dasharray="40,20"/>
+
+      <!-- City grid in distance — tiny rectangles -->
+      <g opacity="0.25" fill="#c8b888">
+        <rect x="580" y="505" width="3" height="2"/>
+        <rect x="588" y="503" width="4" height="2"/>
+        <rect x="596" y="506" width="3" height="2"/>
+        <rect x="604" y="504" width="5" height="2"/>
+        <rect x="614" y="505" width="3" height="2"/>
+        <rect x="622" y="503" width="4" height="2"/>
+        <rect x="630" y="506" width="3" height="2"/>
+        <rect x="638" y="504" width="4" height="2"/>
+        <rect x="648" y="505" width="3" height="2"/>
+        <rect x="656" y="503" width="5" height="2"/>
+        <rect x="666" y="506" width="3" height="2"/>
+        <rect x="580" y="510" width="6" height="2"/>
+        <rect x="590" y="510" width="4" height="2"/>
+        <rect x="598" y="510" width="5" height="2"/>
+        <rect x="608" y="510" width="3" height="2"/>
+        <rect x="616" y="510" width="6" height="2"/>
+        <rect x="626" y="510" width="4" height="2"/>
+        <rect x="634" y="510" width="5" height="2"/>
+        <rect x="644" y="510" width="3" height="2"/>
+        <rect x="652" y="510" width="6" height="2"/>
+        <rect x="662" y="510" width="4" height="2"/>
+      </g>
+
+      <!-- Industrial buildings mid-ground -->
+      <g fill="#8a7040" opacity="0.5">
+        <rect x="200" y="578" width="80" height="28" rx="1"/>
+        <rect x="290" y="582" width="60" height="24" rx="1"/>
+        <rect x="360" y="575" width="100" height="32" rx="1"/>
+        <rect x="900" y="570" width="90" height="30" rx="1"/>
+        <rect x="1000" y="574" width="70" height="26" rx="1"/>
+        <rect x="1080" y="568" width="110" height="34" rx="1"/>
+      </g>
+
+      <!-- Solar farms — grid of dots -->
+      <g opacity="0.2" fill="#604818">
+        <rect x="820" y="585" width="60" height="40"/>
+      </g>
+      <g opacity="0.35" stroke="#c8a060" stroke-width="0.3" fill="none">
+        <line x1="830" y1="585" x2="830" y2="625"/>
+        <line x1="840" y1="585" x2="840" y2="625"/>
+        <line x1="850" y1="585" x2="850" y2="625"/>
+        <line x1="860" y1="585" x2="860" y2="625"/>
+        <line x1="870" y1="585" x2="870" y2="625"/>
+        <line x1="820" y1="595" x2="880" y2="595"/>
+        <line x1="820" y1="605" x2="880" y2="605"/>
+        <line x1="820" y1="615" x2="880" y2="615"/>
+      </g>
+
+      <!-- Aqueduct / canal line -->
+      <path d="M0,680 Q360,665 720,658 Q1080,651 1440,648" stroke="#7090a0" stroke-width="2.5" fill="none" opacity="0.4"/>
+
+      <!-- Dust/haze in lower terrain -->
+      <ellipse cx="300" cy="700" rx="250" ry="60" fill="#c8a870" opacity="0.15" filter="url(#blur1)"/>
+      <ellipse cx="1100" cy="720" rx="200" ry="50" fill="#c8a870" opacity="0.12" filter="url(#blur1)"/>
+    </svg>
+  </div>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-tag">California · Nationwide · Est. 2014</div>
+    <h1 class="hero-headline">
+      Most brokers<br>
+      <span>won't touch</span><br>
+      this deal.
+    </h1>
+    <div class="hero-bottom">
+      <p class="hero-sub">
+        Cannabis M&A, commercial acquisitions,<br>
+        and complex transactions that require<br>
+        someone who's actually done this before.
+      </p>
+      <div class="hero-cta">
+        <a href="tel:7609879202" class="hero-phone">760.987.9202</a>
+        <a href="mailto:Dowse.Deals@Gmail.com" class="hero-email-link">Dowse.Deals@Gmail.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-inner">
+    <span>Cannabis M&A</span>
+    <span>Commercial Real Estate</span>
+    <span>Business Acquisitions</span>
+    <span>Restricted Markets</span>
+    <span>Valuations & BOV</span>
+    <span>Transaction Funding</span>
+    <span>$12.5M+ Closed</span>
+    <span>DRE 02074994</span>
+    <span>Cannabis M&A</span>
+    <span>Commercial Real Estate</span>
+    <span>Business Acquisitions</span>
+    <span>Restricted Markets</span>
+    <span>Valuations & BOV</span>
+    <span>Transaction Funding</span>
+    <span>$12.5M+ Closed</span>
+    <span>DRE 02074994</span>
+  </div>
+</div>
+
+<!-- STATEMENT -->
+<section class="statement-section reveal" id="about-intro">
+  <div class="statement-left">
+    The deals that<br>define a practice<br>are the ones<br>nobody else<br>closes.
+    <em>— That's the work.</em>
+  </div>
+  <div class="statement-right">
+    <p>
+      Since 2014 I've been operating in California's most regulated markets. <strong>Cannabis acquisitions, commercial real estate, business M&A</strong> — the transactions that require deep regulatory knowledge, financial literacy, and the operational experience to actually get them across the finish line.
+    </p>
+    <p>
+      I've worked deals that required CDTFA clearance, DCC ownership transfers, city consent, entitlement, and multi-party negotiation — simultaneously. <strong>That's not unusual for this work. That's just Tuesday.</strong>
+    </p>
+    <p>
+      Based in California. Licensed to deal in commercial, business, and residential real estate. Working nationwide on complex acquisitions.
+    </p>
+  </div>
+</section>
+
+<!-- TRANSACTIONS -->
+<section class="tx-section" id="transactions">
+  <div class="tx-header">
+    <div class="tx-label">Closed Transactions</div>
+    <div class="tx-total">$12,575,000 Total Volume</div>
+  </div>
+
+  <div class="tx-list">
+    <div class="tx-row">
+      <div class="tx-amount">$4.5M</div>
+      <div class="tx-desc">
+        <strong>Office Building + Cannabis Retail License</strong>
+        Dual-asset transaction. Buyer and seller representation. Building sale and license transfer in a highly regulated municipality. Complex coordination across regulatory, legal, and real estate stakeholders.
+      </div>
+      <div class="tx-meta">Riverside County, CA</div>
+    </div>
+    <div class="tx-row">
+      <div class="tx-amount">$2M</div>
+      <div class="tx-desc">
+        <strong>Commercial Industrial Building — Cannabis Cultivation</strong>
+        High-powered cultivation facility sold to cannabis operator. Buyer and seller representation. Coordinated power infrastructure, zoning, and operational requirements through close.
+      </div>
+      <div class="tx-meta">Cathedral City, CA</div>
+    </div>
+    <div class="tx-row">
+      <div class="tx-amount">$1.6M</div>
+      <div class="tx-desc">
+        <strong>Entitled Land — Retail Dispensary Development</strong>
+        Raw land acquisition, buyer representation. Entitled for 6,000 SF building on 0.63 acres. Followed through entitlement, parcel delivery, grading permits, and retail dispensary licensing. Highly sought-after freeway exit location.
+      </div>
+      <div class="tx-meta">Wildomar, CA</div>
+    </div>
+    <div class="tx-row">
+      <div class="tx-amount">$1.25M</div>
+      <div class="tx-desc">
+        <strong>Pre-Operational Retail Dispensary License</strong>
+        Complex regulated business M&A. Among the highest pre-operational valuations in the Costa Mesa market in recent years. Negotiated and closed a highly restricted business merger and acquisition.
+      </div>
+      <div class="tx-meta">Costa Mesa, CA</div>
+    </div>
+    <div class="tx-row">
+      <div class="tx-amount">$1.2M</div>
+      <div class="tx-desc">
+        <strong>Retail, Distribution & Manufacturing License Package</strong>
+        Buyer and seller representation. Business and lease sale. Multi-license transaction in a highly regulated city. Coordinated operational transfer, lease assignment, and regulatory approvals.
+      </div>
+      <div class="tx-meta">Riverside County, CA</div>
+    </div>
+    <div class="tx-row">
+      <div class="tx-amount">$1M</div>
+      <div class="tx-desc">
+        <strong>Cannabis Retail & Delivery License</strong>
+        Buyer representation. Complex transaction in a highly regulated city. License sale with full due diligence on DCC compliance, local permit status, and CDTFA liability.
+      </div>
+      <div class="tx-meta">Riverside County, CA</div>
+    </div>
+    <div class="tx-row">
+      <div class="tx-amount">$500K</div>
+      <div class="tx-desc">
+        <strong>Turnkey Microbusiness Cultivation Facility</strong>
+        10,000 SF building. Fully operational cannabis cultivation microbusiness. End-to-end transaction management from due diligence through close.
+      </div>
+      <div class="tx-meta">Sacramento, CA</div>
+    </div>
+    <div class="tx-row">
+      <div class="tx-amount">$275K</div>
+      <div class="tx-desc">
+        <strong>Cultivation & Distribution Business + Lease</strong>
+        Negotiated lease and business transaction. Buyer and seller representation. Combined operational business sale with lease assignment.
+      </div>
+      <div class="tx-meta">Clearlake, CA</div>
+    </div>
+    <div class="tx-row">
+      <div class="tx-amount">$250K</div>
+      <div class="tx-desc">
+        <strong>Delivery License Management Agreement</strong>
+        Buyer and seller representation. Structured and negotiated a management agreement for an operational delivery license. Complex compliance and operational handoff.
+      </div>
+      <div class="tx-meta">Orange County, CA</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section reveal" id="services">
+  <div class="services-header">
+    <div class="services-title">What I<br>bring<br>to a deal.</div>
+  </div>
+  <div class="services-grid">
+    <div class="svc">
+      <div class="svc-n">01</div>
+      <div class="svc-name">Business Brokerage</div>
+      <p class="svc-desc">Buy-side and sell-side. LOIs, purchase agreements, due diligence, escrow coordination. From first conversation to close.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-n">02</div>
+      <div class="svc-name">Cannabis M&A</div>
+      <p class="svc-desc">License transfers, ownership approvals, CDTFA clearance, DCC compliance. The regulatory layer most brokers don't know exists.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-n">03</div>
+      <div class="svc-name">Commercial Real Estate</div>
+      <p class="svc-desc">Investment sales, industrial, retail. Site selection, zoning analysis, entitlement, and procurement for complex operators.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-n">04</div>
+      <div class="svc-name">Valuations & BOV</div>
+      <p class="svc-desc">Broker opinions of value grounded in real transaction data. Not estimates — analysis built on what deals actually close for.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-n">05</div>
+      <div class="svc-name">Transaction Funding</div>
+      <p class="svc-desc">Capital sourcing for acquisitions. Connected to lenders and private capital sources who understand restricted-market deals.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS BAR -->
+<div class="cred-bar reveal">
+  <div class="cred-item">
+    <div class="cred-n">$12.5M+</div>
+    <div class="cred-l">Closed Volume</div>
+  </div>
+  <div class="cred-item">
+    <div class="cred-n">10+</div>
+    <div class="cred-l">Years in Restricted Markets</div>
+  </div>
+  <div class="cred-item">
+    <div class="cred-n">CA + US</div>
+    <div class="cred-l">Geographic Reach</div>
+  </div>
+  <div class="cred-item">
+    <div class="cred-n">DRE 02074994</div>
+    <div class="cred-l">CA Licensed Broker</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about-section reveal" id="about">
+  <div class="about-left">
+    <div class="section-kicker">Background</div>
+    <h2 class="about-title">Built for<br>complexity.</h2>
+    <div class="about-body">
+      <p>
+        Most brokers avoid the deals that require real work. I built a practice around them. <strong>Since 2014 I've been closing transactions in California's most regulated industries</strong> — developing the kind of expertise that only comes from doing the work, not studying it.
+      </p>
+      <p>
+        I read lease agreements, balance sheets, and income statements. I understand what kills cannabis deals — CDTFA tax liability, DCC ownership approval timelines, local permit gaps, and the difference between a license that looks active and one that actually is.
+      </p>
+      <p>
+        <strong>My background spans real estate brokerage, business operations, and construction management.</strong> That combination — regulatory depth, financial literacy, and operational experience — is what I bring to transactions that need more than a standard broker.
+      </p>
+    </div>
+  </div>
+  <div class="about-right">
+    <table class="cred-table">
+      <tr>
+        <td>License</td>
+        <td>CA DRE 02074994</td>
+      </tr>
+      <tr>
+        <td>Scope</td>
+        <td>Commercial · Business · Residential</td>
+      </tr>
+      <tr>
+        <td>Specialization</td>
+        <td>Cannabis M&A · Restricted Markets</td>
+      </tr>
+      <tr>
+        <td>Operating Since</td>
+        <td>2014</td>
+      </tr>
+      <tr>
+        <td>Geography</td>
+        <td>California + Nationwide</td>
+      </tr>
+      <tr>
+        <td>Education</td>
+        <td>BA Business/Philosophy, UCSB · AS Real Estate · CM Certificate (In Progress)</td>
+      </tr>
+      <tr>
+        <td>Works With</td>
+        <td>Buyers · Sellers · Attorneys · Operators</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-top reveal">
+    <h2 class="contact-challenge">
+      Have a deal<br>
+      nobody else<br>
+      <span>will touch?</span>
+    </h2>
+    <p class="contact-sub">
+      Call, email, or connect on LinkedIn. Direct conversation — no pitch, no pressure. If it's a deal worth having, we'll figure out fast whether I can help.
+    </p>
+  </div>
+  <div class="contact-channels reveal">
+    <a href="tel:7609879202" class="channel">
+      <div class="ch-type">Phone</div>
+      <div class="ch-value">760.987.9202</div>
+      <div class="ch-action">Call now →</div>
+    </a>
+    <a href="mailto:Dowse.Deals@Gmail.com" class="channel">
+      <div class="ch-type">Email</div>
+      <div class="ch-value">Dowse.Deals</div>
+      <div class="ch-action">Send a message →</div>
+    </a>
+    <a href="https://linkedin.com" target="_blank" rel="noopener" class="channel">
+      <div class="ch-type">LinkedIn</div>
+      <div class="ch-value">Ryan Dowse</div>
+      <div class="ch-action">Connect →</div>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">RYAN DOWSE</div>
+  <div class="footer-right">California Real Estate Broker · DRE 02074994 · Based in California · Working Nationwide · © 2025</div>
+</footer>
+
+<script>
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+});
+
+document.querySelectorAll('a, button, .svc, .channel, .tx-row').forEach(el => {
+  el.addEventListener('mouseenter', () => cursor.classList.add('expanded'));
+  el.addEventListener('mouseleave', () => cursor.classList.remove('expanded'));
+});
+
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('solid', window.scrollY > 60);
+});
+
+const reveals = document.querySelectorAll('.reveal');
+const txRows = document.querySelectorAll('.tx-row');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08 });
+
+reveals.forEach(el => observer.observe(el));
+
+const txObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const rows = entry.target.querySelectorAll('.tx-row');
+      rows.forEach((row, i) => {
+        setTimeout(() => row.classList.add('visible'), i * 80);
+      });
+      txObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.05 });
+
+const txList = document.querySelector('.tx-list');
+if (txList) txObserver.observe(txList);
+</script>
+
+</body>
+</html>
