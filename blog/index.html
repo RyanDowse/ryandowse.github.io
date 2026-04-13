@@ -28,7 +28,6 @@
 html{scroll-behavior:smooth;}
 body{background:var(--paper);color:var(--ink);font-family:var(--mono);font-size:12px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 
-
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 48px;height:56px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid transparent;transition:all 0.4s ease;background:transparent;}
 nav.solid{background:rgba(14,14,13,0.95);border-bottom-color:#1e1e1c;backdrop-filter:blur(12px);}
 .nav-mark{font-family:var(--display);font-size:22px;letter-spacing:0.06em;color:var(--paper);text-decoration:none;opacity:0;transition:opacity 0.4s;}
@@ -41,47 +40,36 @@ nav.solid .nav-links a:hover{color:var(--paper);}
 .nav-links a.current{color:var(--accent);}
 nav.solid .nav-links a.current{color:var(--accent);}
 
-/* Hero */
 .blog-hero{padding:140px 48px 60px;border-bottom:1px solid var(--rule);background:var(--ink);}
 .blog-hero-tag{font-size:9px;letter-spacing:0.28em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;display:flex;align-items:center;gap:12px;}
 .blog-hero-tag::before{content:'';display:block;width:24px;height:1px;background:var(--accent);}
 .blog-hero-title{font-family:var(--display);font-size:clamp(52px,8vw,110px);line-height:0.92;letter-spacing:0.02em;color:var(--white);margin-bottom:20px;}
 .blog-hero-sub{font-family:var(--serif);font-size:14px;font-style:italic;color:#666;max-width:500px;line-height:1.8;}
 
-/* Ticker */
 .ticker-wrap{background:var(--accent);overflow:hidden;white-space:nowrap;padding:9px 0;border-bottom:1px solid var(--accent2);}
 .ticker-inner{display:inline-block;animation:ticker 30s linear infinite;}
 .ticker-inner span{font-family:var(--display);font-size:13px;letter-spacing:0.12em;color:var(--white);padding:0 36px;}
 .ticker-inner span::before{content:'—';margin-right:36px;opacity:0.5;}
 @keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 
-/* Posts grid */
 .posts-section{padding:72px 48px;max-width:1200px;margin:0 auto;}
 .posts-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:48px;padding-bottom:16px;border-bottom:1px solid var(--rule);}
 .posts-count{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--dim);}
 .posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);}
 
-/* Post card */
 .post-card{background:var(--paper);padding:36px 32px;position:relative;transition:background 0.2s;display:flex;flex-direction:column;}
 .post-card:hover{background:var(--paper2);}
 .post-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform 0.3s ease;}
 .post-card:hover::before{transform:scaleX(1);}
-.post-card a{text-decoration:none;color:inherit;}
-
+.post-card a{text-decoration:none;color:inherit;display:flex;flex-direction:column;height:100%;}
 .post-tag{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;}
 .post-title{font-family:var(--display);font-size:26px;letter-spacing:0.02em;line-height:1.05;color:var(--ink);margin-bottom:16px;transition:color 0.2s;}
 .post-card:hover .post-title{color:var(--accent);}
 .post-excerpt{font-family:var(--serif);font-size:12px;color:var(--muted);line-height:1.8;flex:1;margin-bottom:24px;}
-.post-meta{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--rule-light);}
+.post-meta{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--rule-light);margin-top:auto;}
 .post-date{font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--dim);}
 .post-read{font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);}
 
-/* Empty state */
-.empty-state{grid-column:1/-1;padding:80px 40px;text-align:center;color:var(--dim);}
-.empty-title{font-family:var(--display);font-size:48px;letter-spacing:0.04em;color:var(--rule);margin-bottom:12px;}
-.empty-sub{font-size:11px;color:var(--dim);line-height:1.8;}
-
-/* CTA */
 .cta-bar{background:var(--ink);padding:60px 48px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #1e1e1c;}
 .cta-text{font-family:var(--display);font-size:clamp(28px,3vw,44px);letter-spacing:0.03em;color:var(--white);}
 .cta-text span{color:var(--accent);}
@@ -112,7 +100,6 @@ footer{background:#080807;padding:22px 48px;display:flex;justify-content:space-b
 </head>
 <body>
 
-
 <nav id="nav">
   <a href="/" class="nav-mark">DOWSE</a>
   <ul class="nav-links">
@@ -124,88 +111,64 @@ footer{background:#080807;padding:22px 48px;display:flex;justify-content:space-b
   </ul>
 </nav>
 
-<!-- HERO -->
 <div class="blog-hero">
   <div class="blog-hero-tag">Field Notes</div>
   <h1 class="blog-hero-title">The work.<br>Unfiltered.</h1>
-  <p class="blog-hero-sub">Real insight on cannabis M&A, commercial acquisitions, and the deals most brokers won't touch. Written from the deal table, not a textbook.</p>
+  <p class="blog-hero-sub">Real insight on cannabis M&amp;A, commercial acquisitions, and the deals most brokers won't touch. Written from the deal table, not a textbook.</p>
 </div>
 
-<!-- TICKER -->
 <div class="ticker-wrap">
   <div class="ticker-inner">
-    <span>Cannabis M&A</span><span>Commercial Real Estate</span><span>Business Acquisitions</span><span>Due Diligence</span><span>LOI & Contracts</span><span>CDTFA Compliance</span><span>DCC Licensing</span><span>Restricted Markets</span>
-    <span>Cannabis M&A</span><span>Commercial Real Estate</span><span>Business Acquisitions</span><span>Due Diligence</span><span>LOI & Contracts</span><span>CDTFA Compliance</span><span>DCC Licensing</span><span>Restricted Markets</span>
+    <span>Cannabis M&amp;A</span><span>Commercial Real Estate</span><span>Business Acquisitions</span><span>Due Diligence</span><span>LOI &amp; Contracts</span><span>CDTFA Compliance</span><span>DCC Licensing</span><span>Restricted Markets</span>
+    <span>Cannabis M&amp;A</span><span>Commercial Real Estate</span><span>Business Acquisitions</span><span>Due Diligence</span><span>LOI &amp; Contracts</span><span>CDTFA Compliance</span><span>DCC Licensing</span><span>Restricted Markets</span>
   </div>
 </div>
 
-<!-- POSTS -->
 <div class="posts-section">
   <div class="posts-header">
     <div style="font-family:var(--display);font-size:32px;letter-spacing:0.03em;">All Posts</div>
-    <div class="posts-count" id="postCount">0 Articles</div>
+    <div class="posts-count" id="postCount"></div>
   </div>
 
   <div class="posts-grid reveal" id="postsGrid">
 
-    <!-- ── ADD NEW POST CARDS BELOW THIS LINE ── -->
-    <!-- Copy this block for each new post and update the href, tag, title, excerpt, date, and read time -->
-
-    <!--
-    <div class="post-card">
-      <a href="/blog/posts/your-post-filename.html">
-        <div class="post-tag">Cannabis M&A</div>
-        <div class="post-title">Your Post Title Here</div>
-        <p class="post-excerpt">A 1-2 sentence excerpt that draws the reader in. Keep it punchy and specific.</p>
-        <div class="post-meta">
-          <div class="post-date">Month DD, YYYY</div>
-          <div class="post-read">X min read →</div>
-        </div>
-      </a>
-    </div>
-    -->
-
-    <!-- POST 1 -->
+    <!-- POST 1 — published -->
     <div class="post-card">
       <a href="/blog/posts/california-cannabis-municipal-calendar-deal-flow.html">
-        <div class="post-tag">Cannabis M&A &amp; Commercial Real Estate</div>
+        <div class="post-tag">Cannabis M&amp;A &amp; Commercial Real Estate</div>
         <div class="post-title">How to Read California's Cannabis Municipal Calendar as a Deal-Flow Signal</div>
         <p class="post-excerpt">If you're using statewide headlines to time your next acquisition, you're looking at the wrong data. The real leading indicator lives at the city council level.</p>
         <div class="post-meta">
           <div class="post-date">Apr 10, 2026</div>
-          <div class="post-read">6 min read &rarr;</div>
+          <div class="post-read">6 min read &#8594;</div>
         </div>
       </a>
     </div>
 
-    <!-- POST 2 -->
-    <div class="post-card">
-      <a href="/blog/posts/what-buyers-miss-cannabis-ma.html">
-        <div class="post-tag">Cannabis M&A</div>
-        <div class="post-title">What Buyers Miss in Cannabis M&A Deals</div>
-        <p class="post-excerpt">Most buyers walk into a cannabis acquisition thinking price is the hard part. Price is the easy part. Here's what actually kills deals — or closes them wrong.</p>
-        <div class="post-meta">
-          <div class="post-date">Apr 10, 2026</div>
-          <div class="post-read">5 min read &rarr;</div>
-        </div>
-      </a>
-    </div>
-
-    <!-- EMPTY STATE -->
+    <!-- PLACEHOLDER 2 -->
     <div class="post-card" style="background:transparent;border:1px dashed var(--rule-light);display:flex;align-items:center;justify-content:center;min-height:280px;">
       <div style="text-align:center;color:var(--dim);">
         <div style="font-family:var(--display);font-size:32px;letter-spacing:0.04em;color:var(--rule);margin-bottom:8px;">Coming Soon</div>
         <div style="font-size:10px;letter-spacing:0.1em;">Next post in progress</div>
       </div>
     </div>
+
+    <!-- PLACEHOLDER 3 -->
+    <div class="post-card" style="background:transparent;border:1px dashed var(--rule-light);display:flex;align-items:center;justify-content:center;min-height:280px;">
+      <div style="text-align:center;color:var(--dim);">
+        <div style="font-family:var(--display);font-size:32px;letter-spacing:0.04em;color:var(--rule);margin-bottom:8px;">Coming Soon</div>
+        <div style="font-size:10px;letter-spacing:0.1em;">Next post in progress</div>
+      </div>
+    </div>
+
+  </div>
 </div>
 
-<!-- CTA -->
 <div class="cta-bar">
   <div class="cta-text">Have a deal nobody<br>else will <span>touch?</span></div>
   <div class="cta-links">
     <a href="tel:7609879202" class="cta-phone">760.987.9202</a>
-    <a href="/cdn-cgi/l/email-protection#a1d3d8c0cfe1d3d8c0cfc5ced6d2c48fc2cecc" class="cta-email"><span class="__cf_email__" data-cfemail="e5979c848ba5979c848b818a929680cb868a88">[email&#160;protected]</span></a>
+    <a href="mailto:ryan@ryandowse.com" class="cta-email">ryan@ryandowse.com</a>
   </div>
 </div>
 
@@ -214,13 +177,17 @@ footer{background:#080807;padding:22px 48px;display:flex;justify-content:space-b
   <div class="footer-right">CA Broker · DRE 02074994 · © 2026</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-
+<script>
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => nav.classList.toggle('solid', window.scrollY > 40));
 
-// Count real posts (exclude placeholder cards)
 const realPosts = document.querySelectorAll('.post-card a');
-document.getElementById('postCount').textContent = `${realPosts.length} Article${realPosts.length!==1?'s':''}`;
+document.getElementById('postCount').textContent = realPosts.length + ' Article' + (realPosts.length !== 1 ? 's' : '');
 
-const observer = new IntersectionObserver(entries =
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, {threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
