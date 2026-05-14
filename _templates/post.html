@@ -74,14 +74,14 @@
   --ink: #0e0e0d; --paper: #f2ede4; --paper2: #e8e2d8;
   --rule: #c8c0b0; --rule-light: #ddd8ce;
   --accent: #c1370a; --accent2: #8a2406;
-  --muted: #7a7268; --dim: #b0a898; --white: #faf8f4;
+  --muted: #4f4945; --dim: #7a7268; --white: #faf8f4;
   --mono: 'IBM Plex Mono', monospace;
   --serif: 'IBM Plex Serif', Georgia, serif;
   --display: 'Bebas Neue', Impact, sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{background:var(--paper);color:var(--ink);font-family:var(--mono);font-size:12px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+body{background:var(--paper);color:var(--ink);font-family:var(--mono);font-size:14px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 48px;height:56px;display:flex;align-items:center;justify-content:space-between;background:rgba(14,14,13,0.95);border-bottom:1px solid #1e1e1c;backdrop-filter:blur(12px);}
 .nav-mark{font-family:var(--display);font-size:22px;letter-spacing:0.06em;color:var(--paper);text-decoration:none;}
@@ -96,31 +96,31 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 48px;height:56px;d
 .post-tag{font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;display:flex;align-items:center;gap:10px;}
 .post-tag::before{content:'';display:block;width:20px;height:1px;background:var(--accent);}
 .post-title{font-family:var(--display);font-size:clamp(34px,4.8vw,60px);line-height:0.95;letter-spacing:0.02em;color:var(--ink);margin-bottom:20px;}
-.post-subtitle{font-family:var(--serif);font-size:16px;font-style:italic;color:var(--muted);line-height:1.7;margin-bottom:28px;max-width:580px;}
+.post-subtitle{font-family:var(--serif);font-size:18px;font-style:italic;color:var(--muted);line-height:1.7;margin-bottom:28px;max-width:580px;}
 .post-byline{display:flex;align-items:center;gap:20px;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--dim);}
 .byline-sep{color:var(--rule);}
 
-.post-body{font-family:var(--serif);font-size:15px;line-height:1.9;color:#3a3530;}
+.post-body{font-family:var(--serif);font-size:17px;line-height:1.9;color:#3a3530;}
 .post-body p{margin-bottom:24px;}
 .post-body h2{font-family:var(--display);font-size:clamp(26px,3vw,38px);letter-spacing:0.03em;color:var(--ink);margin:52px 0 16px;line-height:1.0;}
-.post-body h3{font-family:var(--mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin:36px 0 12px;}
+.post-body h3{font-family:var(--mono);font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin:36px 0 12px;}
 .post-body strong{color:var(--ink);font-weight:400;font-style:italic;}
 .post-body em{font-style:italic;color:var(--muted);}
 
 .post-body ul{margin:0 0 28px 0;padding-left:0;list-style:none;}
-.post-body li{padding:12px 0 12px 24px;border-bottom:1px solid var(--rule-light);position:relative;color:#4a4540;font-size:14px;line-height:1.7;}
+.post-body li{padding:12px 0 12px 24px;border-bottom:1px solid var(--rule-light);position:relative;color:#4a4540;font-size:16px;line-height:1.7;}
 .post-body li::before{content:'—';position:absolute;left:0;color:var(--accent);}
 .post-body li:last-child{border-bottom:none;}
 .post-body li strong{font-weight:500;font-style:normal;color:var(--ink);}
 
 .pull-quote{border-left:3px solid var(--accent);padding:16px 0 16px 28px;margin:40px 0;font-family:var(--serif);font-size:18px;font-style:italic;color:var(--ink);line-height:1.6;}
 
-.callout{background:var(--paper2);border:1px solid var(--rule);padding:24px 28px;margin:36px 0;font-size:13px;line-height:1.8;font-family:var(--serif);}
+.callout{background:var(--paper2);border:1px solid var(--rule);padding:24px 28px;margin:36px 0;font-size:15px;line-height:1.8;font-family:var(--serif);}
 .callout-label{font-family:var(--mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
 
-.data-row{display:flex;justify-content:space-between;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--rule-light);font-size:13px;}
+.data-row{display:flex;justify-content:space-between;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--rule-light);font-size:15px;}
 .data-row:last-child{border-bottom:none;}
-.data-label{color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:0.08em;}
+.data-label{color:var(--muted);font-family:var(--mono);font-size:12px;letter-spacing:0.08em;}
 .data-value{color:var(--ink);font-family:var(--display);font-size:20px;letter-spacing:0.04em;}
 
 .post-footer{margin-top:72px;padding-top:40px;border-top:1px solid var(--rule);}
@@ -131,7 +131,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 48px;height:56px;d
 .cta-contact{display:flex;flex-direction:column;align-items:flex-end;gap:6px;}
 .cta-phone{font-family:var(--display);font-size:20px;letter-spacing:0.05em;color:var(--white);text-decoration:none;transition:color 0.2s;white-space:nowrap;}
 .cta-phone:hover{color:var(--accent);}
-.cta-email{font-size:9px;letter-spacing:0.12em;color:#444;text-decoration:none;transition:color 0.2s;}
+.cta-email{font-size:9px;letter-spacing:0.12em;color:#a8a89c;text-decoration:none;transition:color 0.2s;}
 .cta-email:hover{color:var(--paper);}
 
 .back-link{display:inline-flex;align-items:center;gap:8px;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--dim);text-decoration:none;margin-bottom:40px;transition:color 0.2s;margin-top:48px;}
@@ -139,8 +139,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 48px;height:56px;d
 .back-link::before{content:'←';}
 
 footer{background:#080807;padding:22px 48px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #1a1a18;}
-.footer-left{font-family:var(--display);font-size:15px;letter-spacing:0.08em;color:#333;}
-.footer-right{font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:#2a2a28;}
+.footer-left{font-family:var(--display);font-size:15px;letter-spacing:0.08em;color:#6a6760;}
+.footer-right{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:#6a6760;}
 
 @media(max-width:768px){
   nav{padding:0 24px;}
