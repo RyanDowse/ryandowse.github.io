@@ -1,0 +1,16 @@
+# macOS / iCloud Drive
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+
+# iCloud placeholders for evicted files
+*.icloud
+.*.icloud
+
+# iCloud / Finder sync artifacts
+.fseventsd/
+.Spotlight-V100/
+.TemporaryItems/
+.Trashes/
+.com.apple.timemachine.donotpresent
